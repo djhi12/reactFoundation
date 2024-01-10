@@ -1,6 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
 
+function Header() {
+
+}
+
+function HomePage() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
+  return (
+    <div>
+      <Header title="Develop. Preview. Ship." />
+      <ul>
+        {names.map((name) => (
+          <li>{name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div className="App">
@@ -17,6 +36,7 @@ function App() {
         >
           Learn React
         </a>
+        <HomePage title="React" />
       </header>
     </div>
   );

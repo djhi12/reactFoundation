@@ -1,24 +1,23 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
+function Header(props) {
+  return <h1>{props.title}</h1>;
+}
 
 function App() {
+  const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ul>
+        {names.map((name) => (
+          <li>{name}</li>
+        ))}
+      </ul>
+      <Header title="React" />
+      <Header title="A new title" />
     </div>
   );
 }

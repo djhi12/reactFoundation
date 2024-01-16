@@ -1,13 +1,14 @@
 // import logo from './logo.svg';
 import React from 'react';
 import './App.css';
+import './Components/Navigation';
 
 
 function App() {
 
   return (
     <div className="App">
-
+      {/* <Navigation/> */}
     </div>
   );
 }
